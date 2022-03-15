@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta
 
 import jwt.api_jwt
-from api_yamdb import settings
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+
+from api_yamdb import settings
 
 from .validators import validate_year
 
