@@ -21,6 +21,17 @@
 - Деплой измененного проекта на удаленном сервере
 - Отправка в телеграм сообщения об успешном деплое
 
+## Проект также готов для запуска на локальной машине:
+1. Склонировать репозиторий git clone https://github.com/MarselMulyukov/yamdb_final.git
+2. Перейти в директорию с инфраструктурой cd yamdb_final/infra
+3. Создать .env файл с переменными окружения по примеру env_example
+4. Выполнить команду docker-compose -d --build
+5. Выполнить команду docker-compose exec web python manage.py migrate
+6. Выполнить команду docker-compose exec web python manage.py collectstatic
+7. Выполнить команду docker-compose exec web python manage.py loaddata fixtures.json
+8. Проект должен быть доступен по адресу localhost/
+9. Админка должна быть доступна по адресу localhost/admin/
+
 ## Технологии
 Django 3.0.5, Django RestFrameWork 3.11, PostreSQL, Docker Compose 3.8, GitHub Actions
  
