@@ -1,6 +1,3 @@
-# yamdb_final
-yamdb_final
-
 [![Django-app workflow](https://github.com/MarselMulyukov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/MarselMulyukov/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 # YamDB
@@ -15,11 +12,17 @@ yamdb_final
 5. Создание комментария к отзыву.
 6. Присвоение пользователем оценки произведению (по шкале от 1 до 10) и подсчет рейтинга произведения.
 
+## Что сделано
+1. Разработана API
+2. Подготовлена инфраструктура для развертывания в трех docker контейнерах: web, db, nginx
+3. Написан workflow GitHub actions на случай отправки нового коммита на GitHub, в нем следующие шаги:
+- Автоматическое тестирование на PEP8 и пользовательские тесты
+- Создание и отправка нового образа проекта на Docker Hub
+- Деплой измененного проекта на удаленном сервере
+- Отправка в телеграм сообщения об успешном деплое
+
 ## Технологии
-Django 3.0.5, Django RestFrameWork 3.11, PostreSQL, Docker Compose 3.8
+Django 3.0.5, Django RestFrameWork 3.11, PostreSQL, Docker Compose 3.8, GitHub Actions
  
-## Ссылка на ресурс
-- Приложение доступно по адресу http://130.193.54.79/
-- OpenAPI спецификация доступна по адресу http://130.193.54.79/redoc/
 ## Авторы
-Егор, Марсель, Владислав при поддержке Яндекс.Практикум.
+Марсель при поддержке Яндекс.Практикум
